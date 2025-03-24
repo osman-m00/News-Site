@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
+import Sidenews from './components/Sidenews'
 import './App.css'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <>
     <Header/>
     <Main/>
-
+    <Sidenews/>
     </>
   )
 }
