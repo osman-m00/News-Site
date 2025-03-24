@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
 import Sidenews from './components/Sidenews'
+import Scrollnews from './components/Scrollnews'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Main/>
     <Sidenews/>
     </div>
+    <Scrollnews />
     </>
   )
 }
