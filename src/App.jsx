@@ -8,9 +8,12 @@ function App() {
 
   return (
     <>
+    
     <Header/>
+    <div className='flex  mt-40 ml-10'>
     <Main/>
     <Sidenews/>
+    </div>
     </>
   )
 }

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Main = () => {
   return (
-    <div className="border border-black w-[900px] rounded-2xl overflow-hidden bg-white mt-40 ml-10">
+    <div className="border border-black w-[900px] rounded-2xl overflow-hidden bg-white  ml-10">
       
-      <div className="w-full h-[450px]">
+      <div className="w-full h-[350px]">
         <img className="w-full h-full object-cover" src="/news.jpg" alt="News" />
       </div>
 
