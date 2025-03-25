@@ -8,14 +8,27 @@ const Main = () => {
     const fetchNews = async () => {
       try {
         const Apikey = import.meta.env.VITE_NEWS_API_KEY;
-        const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&pageSize=1&apiKey=${Apikey}`);
-        setNews(response.data.articles[0]); // Then update state
+        const response = await axios.get(
+          `https://newsapi.org/v2/top-headlines?country=us&category=general&pageSize=5&apiKey=${Apikey}`
+        );
+        
+  
+        console.log("API Response:", response.data); // Debugging Line
+  
+        const articles = response.data?.articles;
+        if (articles && articles.length > 0) {
+          setNews(articles[0]);
+        } else {
+          console.warn("No news articles found.");
+        }
       } catch (error) {
-        console.error('News API Error:', error);
+        console.error("News API Error:", error);
       }
     };
     fetchNews();
   }, []);
+  
+  
 
   return (
     <div className="border border-black w-[900px] rounded-2xl overflow-hidden bg-white ml-10">
